@@ -13,7 +13,7 @@ const RISKS = [
 
 export function RiskTicker() {
   return (
-    <GlassCard className="flex items-center overflow-hidden border-neon-red/30 bg-neon-red/5 h-12">
+    <GlassCard className="!p-0 flex items-center overflow-hidden border-neon-red/30 bg-neon-red/5 h-12">
       <div className="bg-neon-red/20 px-4 h-full flex items-center gap-2 border-r border-neon-red/30 z-10 shrink-0">
         <AlertTriangle className="w-5 h-5 text-neon-red animate-pulse" />
         <span className="font-bold text-neon-red whitespace-nowrap text-sm">CRITICAL ALERTS</span>
@@ -23,11 +23,11 @@ export function RiskTicker() {
         <motion.div
             className="flex gap-12 whitespace-nowrap absolute pl-4"
             animate={{ x: ["0%", "-100%"] }}
-            transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
+            transition={{ repeat: Infinity, duration: 780, ease: "linear" }}
             style={{ width: "max-content" }}
         >
             {[...RISKS, ...RISKS, ...RISKS].map((risk, i) => (
-                <span key={i} className="text-sm text-white font-mono flex items-center gap-2">
+                <span key={i} className="text-sm text-white font-mono flex shrink-0 items-center gap-2 leading-6">
                     <span className="w-1.5 h-1.5 bg-neon-red rounded-full"></span>
                     {risk.text}
                 </span>
@@ -37,4 +37,3 @@ export function RiskTicker() {
     </GlassCard>
   );
 }
-
