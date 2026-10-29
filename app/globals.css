@@ -1,0 +1,12 @@
+@config "../tailwind.config.ts";
+@import "tailwindcss";
+
+@layer components {
+  .glass {
+    @apply bg-glass-gradient backdrop-blur-[24px] backdrop-saturate-[180%] border border-glass-edge shadow-glass-edge;
+  }
+
+  .glass-card {
+    @apply bg-glass-gradient backdrop-blur-[24px] backdrop-saturate-[180%] border border-glass-edge shadow-glass-edge bg-glass-panel rounded-xl;
+  }
+}
